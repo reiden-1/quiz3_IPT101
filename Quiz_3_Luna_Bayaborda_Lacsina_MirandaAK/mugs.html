@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Set character encoding to UTF-8 for proper rendering of text -->
+  <meta charset="UTF-8">
+  
+  <!-- Set the title of the webpage -->
+  <title>7-Day Weather Forecast</title>
+  
+  <!-- Link to the external stylesheet for styling the page -->
+  <link rel="stylesheet" href="fore.css">
+</head>
+<body>
+  <!-- Main container for the weather forecast app -->
+  <div class="container">
+    <!-- Header for the weather forecast title -->
+    <h1>7-Day Weather Forecast</h1>
+    
+    <!-- Input field for the city name, with a placeholder text -->
+    <input type="text" id="cityInput" placeholder="Enter city Ex: Ottawa, Tokyo, Manila, etc.">
+    
+    <!-- Button that triggers the getForecast function to fetch the weather forecast -->
+    <button onclick="getForecast()">Get Forecast</button>
+    
+    <!-- Display the location title here -->
+    <h2 id="locationTitle"></h2>
+    
+    <!-- Container for displaying the weather forecast cards -->
+    <div id="forecastContainer"></div>
+  </div>
+  
+  <!-- Link to the external JavaScript file for the app functionality -->
+  <script src="app.js"></script>
+</body>
+</html>

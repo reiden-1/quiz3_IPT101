@@ -1,0 +1,304 @@
+body {
+  /* Set font family to a common sans-serif font stack for readability */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  /* Center the text */
+  text-align: center;
+  
+  /* Apply a gradient background from light blue to a lighter blue */
+  background: linear-gradient(to right, #cfefff, #e8f9ff);
+  
+  /* Remove default margin and padding */
+  margin: 0;
+  padding: 0;
+  
+  /* Set text color */
+  color: #333;
+  
+  /* Use flexbox to center the content both horizontally and vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Ensure the body takes up the full viewport height */
+  height: 100vh;
+}
+
+.container {
+  /* Limit the container's width to 95% of the viewport */
+  max-width: 95%;
+  
+  /* Center the container horizontally with auto margins */
+  margin: auto;
+  
+  /* Add padding inside the container */
+  padding: 20px;
+  
+  /* Set a white background color for the container */
+  background-color: white;
+  
+  /* Round the corners of the container */
+  border-radius: 20px;
+  
+  /* Add a subtle shadow around the container */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  
+  /* Smooth transition effect for changes to container properties */
+  transition: all 0.5s ease;
+  
+  /* Set the transformation origin to the top center for smoother scaling */
+  transform-origin: top center;
+}
+
+.container.loading {
+  /* Apply a scaling effect when the container is loading */
+  transform: scale(0.98);
+  
+  /* Reduce opacity when loading to indicate activity */
+  opacity: 0.8;
+}
+
+
+h1 {
+  /* Set the font size for the header */
+  font-size: 2.5em;
+  
+  /* Add space below the header */
+  margin-bottom: 10px;
+  
+  /* Set the text color */
+  color: #0077b6;
+}
+
+input[type="text"] {
+  /* Add padding inside the text input */
+  padding: 12px 20px;
+  
+  /* Set font size for text input */
+  font-size: 16px;
+  
+  /* Set the width of the text input */
+  width: 300px;
+  max-width: 90%; /* Ensure the input doesn't exceed 90% of its container */
+  
+  /* Add border and rounded corners */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  
+  /* Remove the outline on focus */
+  outline: none;
+  
+  /* Transition effect for border color on focus */
+  transition: 0.3s border-color;
+}
+
+input[type="text"]:focus {
+  /* Change the border color when input is focused */
+  border-color: #0077b6;
+}
+
+button {
+  /* Add padding inside the button */
+  padding: 12px 20px;
+  
+  /* Set the font size for the button */
+  font-size: 16px;
+  
+  /* Set the background color of the button */
+  background-color: #0096c7;
+  
+  /* Set the text color to white */
+  color: white;
+  
+  /* Remove default button borders */
+  border: none;
+  
+  /* Set rounded corners for the button */
+  border-radius: 8px;
+  
+  /* Set cursor to pointer to indicate it's clickable */
+  cursor: pointer;
+  
+  /* Transition effect for background color on hover */
+  transition: 0.3s background-color;
+}
+
+button:hover {
+  /* Change the background color on hover */
+  background-color: #0077b6;
+}
+
+#locationTitle {
+  /* Add space at the top of the location title */
+  margin-top: 20px;
+  
+  /* Set font size for the location title */
+  font-size: 1.5em;
+  
+  /* Set the color for the location title */
+  color: #023e8a;
+}
+
+#forecastContainer {
+  /* Use flexbox to arrange the forecast cards */
+  display: flex;
+  
+  /* Center the forecast cards */
+  justify-content: center;
+  
+  /* Allow the cards to wrap to the next line if needed */
+  flex-wrap: wrap;
+  
+  /* Add space between the cards */
+  gap: 20px;
+  
+  /* Add space at the top of the forecast container */
+  margin-top: 30px;
+  
+  /* Transition effect for changes to the forecast container */
+  transition: all 0.5s ease;
+}
+
+#forecastContainer.loading {
+  /* Reduce the opacity when loading */
+  opacity: 0.5;
+}
+
+.card {
+  /* Set the background color of the forecast card */
+  background-color: #f0fbff;
+  
+  /* Add a border around the card */
+  border: 1px solid #d0f0ff;
+  
+  /* Set rounded corners for the card */
+  border-radius: 15px;
+  
+  /* Add padding inside the card */
+  padding: 20px;
+  
+  /* Limit the card's width */
+  max-width: 37%;
+  
+  /* Add shadow to the card */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  
+  /* Transition effect for scaling and shadow changes */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  /* Apply a slight upward translation on hover */
+  transform: translateY(-5px);
+  
+  /* Increase the shadow size on hover */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  /* Add space above and below the heading */
+  margin: 10px 0;
+  
+  /* Set the font size for the heading */
+  font-size: 1.2em;
+  
+  /* Set the text color for the heading */
+  color: #0077b6;
+}
+
+.card p {
+  /* Add space above and below the paragraphs */
+  margin: 5px 0;
+  
+  /* Set the font size for the paragraphs */
+  font-size: 0.95em;
+}
+
+.spinner {
+  /* Set the size of the loading spinner */
+  width: 40px;
+  height: 40px;
+  
+  /* Center the spinner horizontally */
+  margin: 20px auto;
+  
+  /* Set the border for the spinner */
+  border: 4px solid rgba(0, 151, 199, 0.1);
+  
+  /* Make the spinner a circle */
+  border-radius: 50%;
+  
+  /* Set the color for the top of the spinner */
+  border-top-color: #0096c7;
+  
+  /* Apply spinning animation */
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  /* Define the spinning animation */
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  /* Fade-in effect */
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  /* Fade-in and slide-up effect */
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Weather condition backgrounds */
+.sunny {
+  /* Background color for sunny weather */
+  background: rgba(251, 215, 134, 0.4);
+}
+
+.rainy {
+  /* Background color for rainy weather */
+  background: rgba(161, 196, 253, 0.4);
+}
+
+.cloudy {
+  /* Background color for cloudy weather */
+  background: rgba(211, 211, 211, 0.4);
+}
+
+.clear-night {
+  /* Background color for clear night weather */
+  background: rgba(44, 62, 80, 0.4);
+}
+
+.snowy {
+  /* Background color for snowy weather */
+  background: rgba(255, 255, 255, 0.4);
+  
+  /* Add border for snowy weather */
+  border: 1px solid rgba(225, 232, 255, 0.7);
+}
+
+.thunderstorm {
+  /* Background color for thunderstorm weather */
+  background: rgba(106, 90, 205, 0.4);
+  
+  /* Add border for thunderstorm weather */
+  border: 1px solid rgba(106, 90, 205, 0.7);
+}
+
+.foggy {
+  /* Background color for foggy weather */
+  background: rgba(210, 210, 210, 0.6);
+  
+  /* Add border for foggy weather */
+  border: 1px solid rgba(180, 180, 180, 0.7);
+}
